@@ -249,7 +249,7 @@
 
         /* PC端隐藏prize-pool里的订单图标 */
         .prize-pool-order-icon {
-            display: none;
+            display: none; /* PC 端隐藏进度条旁的订单图标，仅保留 hero-actions 里的订单+分享图标 */
         }
 
         .prize-pool-label {
@@ -722,8 +722,9 @@
 
             .prize-pool-display {
                 padding: 4px 18px;  /* 适当缩小进度条高度和内边距 */
-                width: 100%;
-                max-width: 100%;
+                width: auto;              /* 不再占满整行 */
+                max-width: 72%;           /* 再缩短一些长度 */
+                margin: 0 auto;           /* 水平居中 */
             }
 
             .prize-pool-text {
@@ -734,7 +735,7 @@
                 font-size: 20px;  /* 移动端数字再放大一档 */
             }
 
-            /* 奖池剩余和订单图标同一行 */
+            /* 奖池剩余和订单图标同一行（移动端） */
             .prize-pool {
                 display: flex;
                 flex-direction: row;
@@ -751,39 +752,25 @@
                 flex: 1;
             }
 
-            /* 移动端显示prize-pool里的订单图标 */
+            /* 移动端不显示进度条右侧订单图标（HTML 已注释，这里再次兜底隐藏） */
             .prize-pool-order-icon {
-                display: inline-flex;
-                width: 44px;
-                height: 44px;
-                align-items: center;
-                justify-content: center;
-                background-color: #000000;
-                border-radius: 50%;
-                padding: 10px;
-                border: 1px solid #333333;
-                box-sizing: border-box;
-                flex-shrink: 0;
-            }
-
-            /* 移动端隐藏hero-actions里的订单图标 */
-            .hero-actions .action-icon-order {
                 display: none;
             }
 
-            .prize-pool-order-icon img {
-                width: 24px !important;
-                height: 24px !important;
-                max-width: 24px !important;
-                max-height: 24px !important;
-                object-fit: contain !important;
+            /* 移动端隐藏 hero-actions 里的订单图标和分享图标，只保留按钮 */
+            .hero-actions .action-icon-order,
+            .hero-actions .action-icon-share {
+                display: none;
             }
 
             .btn-primary {
                 padding: 12px 30px;
                 font-size: 16px;
-                flex: 1;
+                width: 72%;          /* 与进度条同一宽度 */
+                max-width: 72%;
+                margin: 0 auto;
                 text-align: center;
+                display: block;
             }
 
             .hero-actions {
@@ -792,6 +779,7 @@
                 gap: 12px;
                 width: 100%;
                 align-items: center;
+                justify-content: center;
             }
 
             .action-icon {
@@ -1098,12 +1086,13 @@
                             仅剩 <span class="prize-pool-percent" id="prize-pool-percent">999</span> 名，即将抢空！
                         </span>
                     </div>
-                   
+                    <!-- 移动端：进度条右侧订单图标 -->
+                    <!-- <a href="#activity-rules" class="action-icon prize-pool-order-icon"><img src="Chart.svg" alt="订单图标"></a>-->
                 </div>
                 <div class="hero-actions">
                     <a href="https://download.8888.com?ref=EXI3KZ&forward_url=1&page=1" class="btn-primary" target="_blank">立即抢占888U名额</a>
                     <a href="#activity-rules" class="action-icon action-icon-order"><img src="Chart.svg" alt="订单图标"></a>
-                    <a href="https://download.8888.com?ref=EXI3KZ&forward_url=1&page=1" class="action-icon" target="_blank"><img src="Share.svg" alt="分享图标"></a>
+                    <a href="https://download.8888.com?ref=EXI3KZ&forward_url=1&page=1" class="action-icon action-icon-share" target="_blank"><img src="Share.svg" alt="分享图标"></a>
                 </div>
                 <div class="claimed-count">
                     <span class="claimed-count-icon"></span>
