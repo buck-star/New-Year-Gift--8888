@@ -123,24 +123,27 @@
             font-size: 72px;
             font-weight: bold;
             margin-bottom: 8px;
-            background: linear-gradient(180deg, #FFE9A3 0%, #FDAD00 45%, #C98200 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+            color: #ffffff; /* 标题改为纯白色 */
         }
 
         .hero-subtitle {
             font-size: 24px;
             font-weight: bold;
-            color: #00ff88;
+            color: #ffffff; /* 副标题整体改为白色 */
             margin-bottom: 10px;
-            text-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+            text-shadow: none;
+        }
+
+        .hero-subtitle .highlight-gold {
+            color: #FDAD00; /* 888 U 高亮为金色 */
+            font-size: 1.2em; /* 相对副标题整体放大一点 */
+            font-weight: 800;
         }
 
         .status-badge {
             display: inline-block;
             background-color: #333333;
-            color: #999999;
+            color: #ffffff;
             padding: 8px 16px;
             border-radius: 20px;
             font-size: 14px;
@@ -149,13 +152,13 @@
         }
 
         .status-badge.active {
-            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-            color: #000000;
+            background: #ffffff;  /* 活动进行中：白色底 */
+            color: #000000;       /* 黑色文字 */
         }
 
         .status-badge.ended {
             background-color: #333333;
-            color: #999999;
+            color: #ffffff;
         }
 
         .countdown {
@@ -175,25 +178,25 @@
         .countdown-number {
             font-size: 32px;
             font-weight: bold;
-            color: #00ff88;
+            color: #ffffff;
         }
 
         .countdown-label {
             font-size: 12px;
-            color: #999999;
+            color: #ffffff;
             margin-top: 4px;
         }
 
         .countdown-separator {
             font-size: 32px;
-            color: #00ff88;
+            color: #ffffff;
             line-height: 1;
             display: flex;
             align-items: center;
         }
 
         .activity-time {
-            color: #999999;
+            color: #ffffff;
             font-size: 14px;
             margin-bottom: 12px;
         }
@@ -215,8 +218,8 @@
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, #FFD700 0%, #FFF8DC 50%, #FFD700 100%);
-            color: #000000;
+            background: #ffffff;  /* 白色按钮背景 */
+            color: #000000;       /* 黑色文字 */
             padding: 14px 120px;
             border-radius: 24px;
             border: none;
@@ -226,14 +229,14 @@
             text-decoration: none;
             display: inline-block;
             transition: all 0.3s ease;
-            box-shadow: 0 0 20px rgba(255, 69, 0, 0.8), 0 0 40px rgba(255, 69, 0, 0.5), 0 4px 12px rgba(255, 215, 0, 0.3);
+            box-shadow: 0 0 18px rgba(255, 255, 255, 0.35);
             position: relative;
             box-sizing: border-box;
         }
 
         .btn-primary:hover {
-            background: linear-gradient(135deg, #FFA500 0%, #FFD700 50%, #FFA500 100%);
-            box-shadow: 0 0 30px rgba(255, 69, 0, 1), 0 0 50px rgba(255, 69, 0, 0.6), 0 6px 16px rgba(255, 215, 0, 0.4);
+            background: #f5f5f5;
+            box-shadow: 0 0 24px rgba(255, 255, 255, 0.45);
             transform: translateY(-2px);
         }
 
@@ -308,10 +311,10 @@
         }
 
         .prize-pool-percent {
-            font-size: 14px;
-            font-weight: 700;
-            color: #FF4500;
-            text-shadow: 0 0 4px rgba(255, 69, 0, 0.7), 0 0 8px rgba(255, 69, 0, 0.4);
+            font-size: 18px;   /* 放大 */
+            font-weight: 800;  /* 加粗一点 */
+            color: #FFD700;  /* 数字改为黄色高亮 */
+            text-shadow: 0 0 4px rgba(255, 215, 0, 0.7), 0 0 8px rgba(255, 215, 0, 0.4);
             font-family: 'Courier New', monospace;
         }
 
@@ -340,7 +343,7 @@
         }
 
         .action-icon {
-            color: #cccccc;
+            color: #ffffff;
             font-size: 20px;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -416,7 +419,7 @@
         }
 
         .card-content {
-            color: #cccccc;
+            color: #ffffff;
             font-size: 16px;
             line-height: 1.8;
             margin-bottom: 24px;
@@ -424,7 +427,7 @@
 
         .card-button {
             float: right;
-            background: linear-gradient(135deg, #00ff88 0%, #00cc6a 100%);
+            background: #ffffff;
             color: #000000;
             padding: 12px 32px;
             border-radius: 24px;
@@ -437,7 +440,7 @@
             gap: 8px;
             transition: all 0.3s ease;
             text-decoration: none;
-            box-shadow: 0 4px 12px rgba(0, 255, 136, 0.3);
+            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.25);
         }
 
         .card-button img,
@@ -447,8 +450,8 @@
         }
 
         .card-button:hover {
-            background: linear-gradient(135deg, #00cc6a 0%, #00ff88 100%);
-            box-shadow: 0 6px 16px rgba(0, 255, 136, 0.4);
+            background: #f5f5f5;
+            box-shadow: 0 6px 16px rgba(255, 255, 255, 0.35);
             transform: translateY(-2px);
         }
 
@@ -486,7 +489,7 @@
         }
 
         .reward-table td {
-            color: #cccccc;
+            color: #ffffff;
         }
 
         .reward-table tr:last-child td {
@@ -494,12 +497,12 @@
         }
 
         .reward-table td:first-child {
-            color: #00ff88;
+            color: #ffffff;
             font-weight: 500;
         }
 
         .reward-table td:last-child {
-            color: #00ff88;
+            color: #ffffff;
             font-weight: 600;
         }
 
@@ -510,7 +513,7 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            color: #999999;
+            color: #ffffff;
             cursor: pointer;
             font-size: 14px;
             transition: color 0.3s;
@@ -718,17 +721,17 @@
             }
 
             .prize-pool-display {
-                padding: 6px 20px;
+                padding: 4px 18px;  /* 适当缩小进度条高度和内边距 */
                 width: 100%;
                 max-width: 100%;
             }
 
             .prize-pool-text {
-                font-size: 11px;
+                font-size: 13px;  /* 移动端进度条文字放大 */
             }
 
             .prize-pool-percent {
-                font-size: 14px;
+                font-size: 20px;  /* 移动端数字再放大一档 */
             }
 
             /* 奖池剩余和订单图标同一行 */
@@ -951,15 +954,15 @@
             }
 
             .prize-pool-display {
-                padding: 5px 15px;
+                padding: 4px 12px;  /* 小屏下再略微缩小一点 */
             }
 
             .prize-pool-text {
-                font-size: 10px;
+                font-size: 12px;  /* 小屏下也比默认略大 */
             }
 
             .prize-pool-percent {
-                font-size: 12px;
+                font-size: 18px;  /* 保持较大但略小于平板段，防止压行 */
             }
 
             .btn-primary {
@@ -1059,7 +1062,7 @@
         <div class="hero-container">
             <div class="hero-content">
                 <h1>新年好礼</h1>
-                <div class="hero-subtitle">刷多少送多少，最高送888 U！</div>
+                <div class="hero-subtitle">刷多少送多少，最高送<span class="highlight-gold">888 U</span>！</div>
                 <div class="status-badge" id="status-badge">活动未开始，倒计时到开始时间</div>
                 <div class="countdown">
                     <div class="countdown-item">
@@ -1092,7 +1095,7 @@
                         <span class="prize-pool-number" id="prize-pool-number">000</span>
                         <span class="prize-pool-separator">:</span>
                         <span class="prize-pool-text">
-                            仅剩 <span class="prize-pool-percent" id="prize-pool-percent">15%</span>，即将抢空！
+                            仅剩 <span class="prize-pool-percent" id="prize-pool-percent">999</span> 名，即将抢空！
                         </span>
                     </div>
                    
@@ -1227,8 +1230,9 @@
             const endTime = new Date(endTimeStr);
             const now = new Date();
 
-            // 活动总时长（用于计算奖池剩余百分比）
+            // 活动总时长（用于计算奖池剩余百分比/名额）
             const totalDuration = endTime - startTime;
+            const totalSlots = 999; // 初始名额
             
             // 获取倒计时元素
             const daysElement = document.getElementById('countdown-days');
@@ -1288,7 +1292,7 @@
                     // 奖池剩余同步为 0
                     if (prizePoolNumberElement && prizePoolPercentElement) {
                         prizePoolNumberElement.textContent = '000';
-                        prizePoolPercentElement.textContent = '0%';
+                        prizePoolPercentElement.textContent = '0'; // 仅显示数字，单位“名”由文案补充
                     }
                     // 进度条设为 0
                     if (prizePoolProgressBar) {
@@ -1309,15 +1313,17 @@
                 minutesElement.textContent = minutes.toString().padStart(2, '0');
                 secondsElement.textContent = seconds.toString().padStart(2, '0');
 
-                // 同步更新奖池剩余显示：根据剩余时间占总时长的比例计算百分比
+                // 同步更新奖池剩余显示：根据剩余时间占总时长的比例计算剩余名额（999 名）
                 if (prizePoolNumberElement && prizePoolPercentElement && totalDuration > 0) {
                     const remainingRatio = diff / totalDuration;
                     const remainingPercent = Math.max(0, Math.min(100, Math.round(remainingRatio * 100)));
 
-                    // 将剩余小时数显示为 3 位数字（类似 000:15% 的样式）
+                    // 将剩余小时数显示为 3 位数字（类似 000:xxx 的样式）
                     const remainingHours = Math.floor(diff / (1000 * 60 * 60));
                     prizePoolNumberElement.textContent = remainingHours.toString().padStart(3, '0');
-                    prizePoolPercentElement.textContent = remainingPercent + '%';
+                    // 剩余名额 = 999 * 剩余时间占比（四舍五入）
+                    const remainingSlots = Math.max(0, Math.round(totalSlots * remainingRatio));
+                    prizePoolPercentElement.textContent = remainingSlots.toString(); // 仅显示数字，单位“名”由文案补充
                     
                     // 更新进度条宽度
                     if (prizePoolProgressBar) {
