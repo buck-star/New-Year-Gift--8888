@@ -647,18 +647,35 @@
                 padding: 20px 15px 40px 15px;
             }
 
+            /* 移动端：大图放在导航栏下面，文字在图片下方 */
+            .hero-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-image {
+                order: 0;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
             .hero-content {
-                margin-top: 20px;
+                order: 1;
+                width: 100%;
+                text-align: center; /* 移动端核心文案整体居中 */
+                margin-top: 8px;    /* 文字整体上移 */
             }
 
             .hero-content h1 {
-                font-size: 36px;
-                margin-bottom: 10px;
+                font-size: 64px;   /* 比原来大，但略微收一点 */
+                margin-bottom: 12px;
             }
 
             .hero-subtitle {
-                font-size: 18px;
-                margin-bottom: 12px;
+                font-size: 28px;   /* 比 36px 略小一档 */
+                margin-bottom: 14px;
             }
 
             .status-badge {
@@ -671,6 +688,7 @@
                 flex-wrap: wrap;
                 gap: 8px;
                 margin-bottom: 12px;
+                justify-content: center; /* 移动端倒计时整体居中 */
             }
 
             .countdown-item {
@@ -802,6 +820,23 @@
                 font-size: 14px;
             }
 
+            /* 移动端：顶部大图样式，参照截图效果 */
+            .hero-image {
+                border: none;
+                background: transparent;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            .hero-image img {
+                width: 70% !important;
+                max-width: 280px !important;
+                height: auto !important;
+                object-fit: contain !important;
+                margin: 0 auto;
+                display: block;
+            }
+
             .activity-card {
                 padding: 20px;
             }
@@ -832,7 +867,7 @@
             }
 
             .rules-list {
-                font-size: 13px;
+                font-size: 18px; /* 比基础略大，但比之前更柔和一点 */
                 padding-left: 20px;
             }
 
@@ -872,16 +907,16 @@
             }
 
             .hero-content {
-                margin-top: 15px;
+                margin-top: 4px; /* 小屏再上移一些 */
             }
 
             .hero-content h1 {
-                font-size: 28px;
+                font-size: 48px;  /* 小屏再收一档，避免压迫感 */
                 margin-bottom: 8px;
             }
 
             .hero-subtitle {
-                font-size: 16px;
+                font-size: 24px;
                 margin-bottom: 10px;
             }
 
@@ -894,6 +929,7 @@
             .countdown {
                 gap: 6px;
                 margin-bottom: 10px;
+                justify-content: center; /* 小屏下继续保持倒计时居中 */
             }
 
             .countdown-item {
@@ -936,17 +972,18 @@
                 height: 40px;
             }
 
-            .prize-pool-order-icon {
-                width: 40px;
-                height: 40px;
-            }
-
             .invite-code-hint {
                 font-size: 11px;
             }
 
             .invite-code-value {
                 font-size: 12px;
+            }
+
+            /* 更小屏下再略微缩小图片，保持与示例相似比例 */
+            .hero-image img {
+                width: 65% !important;
+                max-width: 240px !important;
             }
 
             .claimed-count {
@@ -984,7 +1021,7 @@
             }
 
             .rules-list {
-                font-size: 12px;
+                font-size: 16px; /* 比上一档稍微缩小，保持易读又不显拥挤 */
                 padding-left: 18px;
             }
 
