@@ -640,6 +640,109 @@
             transform: none !important;
         }
 
+        /* 右侧悬浮：二维码面板 + 功能图标容器 */
+        .floating-right {
+            position: fixed;
+            right: 24px;
+            bottom: 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 12px;
+            z-index: 999;
+        }
+
+        /* 红色二维码面板 */
+        .floating-qr-panel {
+            background: linear-gradient(180deg, #c41e3a 0%, #a01830 100%);
+            border-radius: 12px;
+            padding: 16px;
+            text-align: center;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .floating-qr-panel .qr-image-wrap {
+            position: relative;
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 12px;
+            background: #fff;
+            border-radius: 8px;
+            padding: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .floating-qr-panel .qr-image-wrap img {
+            width: 124px !important;
+            height: 124px !important;
+            max-width: 124px !important;
+            max-height: 124px !important;
+            object-fit: contain !important;
+            display: block;
+        }
+
+        .floating-qr-panel .qr-logo-center {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 32px;
+            height: 32px;
+            background: #c41e3a;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .floating-qr-panel .qr-text {
+            color: #ffffff;
+            line-height: 1.5;
+        }
+
+        .floating-qr-panel .qr-text-scan {
+            font-size: 13px;
+            margin-bottom: 4px;
+        }
+
+        .floating-qr-panel .qr-text-gift {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .floating-qr-panel .qr-text-hotline {
+            font-size: 12px;
+            margin-bottom: 2px;
+        }
+
+        .floating-qr-panel .qr-text-phone {
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .floating-qr-panel .qr-text-exclusive {
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 8px;
+            color: #ffffff;
+        }
+
+        /* 悬浮功能图标组（与二维码并列） */
+        .floating-right .floating-actions {
+            position: static;
+            right: auto;
+            bottom: auto;
+        }
+
         /* 响应式设计 */
         @media (max-width: 1024px) {
             .hero-container {
@@ -916,10 +1019,40 @@
                 padding-left: 20px;
             }
 
-            .floating-actions {
-                right: 16px;
-                bottom: 16px;
+            .floating-right {
+                right: 12px;
+                bottom: 12px;
+                gap: 10px;
             }
+
+            .floating-qr-panel {
+                padding: 12px;
+            }
+
+            .floating-qr-panel .qr-image-wrap {
+                width: 120px;
+                height: 120px;
+                margin-bottom: 10px;
+            }
+
+            .floating-qr-panel .qr-image-wrap img {
+                width: 106px !important;
+                height: 106px !important;
+                max-width: 106px !important;
+                max-height: 106px !important;
+            }
+
+            .floating-qr-panel .qr-logo-center {
+                width: 28px;
+                height: 28px;
+                font-size: 16px;
+            }
+
+            .floating-qr-panel .qr-text-scan { font-size: 12px; }
+            .floating-qr-panel .qr-text-gift { font-size: 14px; margin-bottom: 4px; }
+            .floating-qr-panel .qr-text-hotline { font-size: 11px; }
+            .floating-qr-panel .qr-text-phone { font-size: 16px; }
+            .floating-qr-panel .qr-text-exclusive { font-size: 13px; margin-top: 6px; }
 
             .floating-icon {
                 min-width: 40px;
@@ -999,9 +1132,44 @@
                 margin-bottom: 12px;
             }
 
+            .floating-right {
+                right: 8px;
+                bottom: 8px;
+                gap: 8px;
+            }
+
+            .floating-qr-panel {
+                padding: 10px;
+            }
+
+            .floating-qr-panel .qr-image-wrap {
+                width: 100px;
+                height: 100px;
+                margin-bottom: 8px;
+            }
+
+            .floating-qr-panel .qr-image-wrap img {
+                width: 88px !important;
+                height: 88px !important;
+                max-width: 88px !important;
+                max-height: 88px !important;
+            }
+
+            .floating-qr-panel .qr-logo-center {
+                width: 24px;
+                height: 24px;
+                font-size: 14px;
+            }
+
+            .floating-qr-panel .qr-text-scan { font-size: 11px; }
+            .floating-qr-panel .qr-text-gift { font-size: 12px; margin-bottom: 2px; }
+            .floating-qr-panel .qr-text-hotline { font-size: 10px; }
+            .floating-qr-panel .qr-text-phone { font-size: 14px; }
+            .floating-qr-panel .qr-text-exclusive { font-size: 11px; margin-top: 4px; }
+
             .prize-pool-display {
                 padding: 6px 12px;
-                max-width: 95%; /* 小屏尽量用满宽，留边距 */
+                max-width: 95%;
             }
 
             .prize-pool-text {
@@ -1163,7 +1331,7 @@
             </div>
             <div class="hero-image">
                 <!-- 图片格式：PNG -->
-                <img src="credit_card.png" alt="3D手机与USDT插图">
+                <img src="New_Year_activities.png" alt="3D手机与USDT插图">
             </div>
         </div>
     </section>
@@ -1253,9 +1421,19 @@
         </ol>
     </footer>
 
-    <!-- 悬浮功能 -->
-    <div class="floating-actions">
-        <a href="#" class="floating-icon"><img src="Up.svg" alt="回到顶部图标"></a>
+    <!-- 右侧悬浮：二维码面板 + 功能图标 -->
+    <div class="floating-right">
+        <div class="floating-qr-panel">
+            <div class="qr-image-wrap">
+                <!-- 二维码图片：可替换为本地 qrcode.jpg 或使用下方 API 生成 JPEG -->
+                <img src="New_Year_activities.jpg" alt="扫码" width="124" height="124" loading="lazy">
+                <span class="qr-logo-center" aria-hidden="true">Q</span>
+            </div>
+            <div class="qr-text qr-text-exclusive">限量支付卡专属码</div>
+        </div>
+        <div class="floating-actions">
+            <a href="#" class="floating-icon"><img src="Up.svg" alt="回到顶部图标"></a>
+        </div>
     </div>
 
     <script>
