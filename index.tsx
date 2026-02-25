@@ -1,0 +1,1 @@
+// Logic moved to static index.html script block
