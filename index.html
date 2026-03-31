@@ -17,12 +17,12 @@
         :root {
             --accent-red: #dc2626;
             --accent-glow: rgba(220, 38, 38, 0.4);
-            --bg-deep: #050505;
+            --bg-deep: #0a2a1f;
         }
 
         body {
             font-family: 'Inter', 'Noto Sans SC', sans-serif;
-            background-color: var(--bg-deep);
+            background: radial-gradient(ellipse at center, #0f3d2e 0%, #0a2a1f 50%, #051a12 100%);
             color: #fff;
             overflow-x: hidden;
             scroll-behavior: smooth;
@@ -36,7 +36,7 @@
         }
 
         .red-gradient-text {
-            background: linear-gradient(135deg, #fff 0%, #dc2626 100%);
+            background: linear-gradient(125deg, #fff 0%, #dc2626 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -351,14 +351,14 @@
 <section class="relative pt-24 pb-10 md:pt-40 md:pb-20 px-6 max-w-7xl mx-auto">
     <div class="grid lg:grid-cols-2 gap-12 md:gap-16 items-center">
         <div class="flex flex-col items-center lg:items-start space-y-6 md:space-y-8 text-center lg:text-left">
-            <div class="inline-flex items-center gap-2 px-3 py-1 bg-red-500/10 rounded-full border border-red-500/20 text-[10px] font-bold text-red-400 uppercase tracking-[0.2em]">
-                <span class="w-1.5 h-1.5 rounded-full bg-red-600 animate-pulse"></span>
-                2026 马年新春嘉年华
-            </div>
+<!--            <div class="inline-flex items-center gap-2 px-3 py-1 bg-red-500/10 rounded-full border border-red-500/20 text-[10px] font-bold text-red-400 uppercase tracking-[0.2em]">-->
+<!--                <span class="w-1.5 h-1.5 rounded-full bg-red-600 animate-pulse"></span>-->
+<!--                2026 马年新春嘉年华-->
+<!--            </div>-->
 
             <div class="relative flex items-center justify-center lg:justify-start">
-                <h1 class="text-3xl sm:text-4xl md:text-6xl xl:text-7xl font-black leading-[1.05] tracking-tight">
-                    马年新春<br class="hidden md:block"/>
+                <h1 class="text-xl sm:text-2xl md:text-4xl xl:text-5xl font-black leading-[1.05] tracking-tight">
+                    8+ 全球消费收益行动<br class="hidden md:block"/>
                     <span class="red-gradient-text">首刷赢 8.8U</span>
                 </h1>
             </div>
@@ -759,8 +759,8 @@
         y.parentNode.insertBefore(t, y);
     })(window, document, "clarity", "script", "v7a4zn8nue");
 
-    const END_DATE = new Date('2026-03-31T23:59:59').getTime();
-    const START_DATE = new Date('2026-02-16T00:00:00').getTime();
+    const END_DATE = new Date('2026-04-15T23:59:59').getTime();
+    const START_DATE = new Date('2026-04-01T00:00:00').getTime();
 
     function updateTimer() {
         const now = Date.now();
